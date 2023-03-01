@@ -21,6 +21,13 @@ class MainApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
+                height: 200,
+                width: 200,
+                child: Image(
+                  image: AssetImage("images/amn.png"),
+                ),
+              ),
+              Container(
                 height: 30,
                 width: 200,
                 child: TextField(
