@@ -10,34 +10,44 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(appBar: AppBar(title: Text("project Tracker"),centerTitle: true, backgroundColor: Colors.transparent,),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("project Tracker"),
+          centerTitle: true,
+          backgroundColor: Colors.transparent,
+        ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              
               Container(
                 height: 30,
-                width: 100,
-                child: Center(child: Text('Username')),
+                width: 200,
+                child: TextField(
+                  textAlign: TextAlign.center,
+                  decoration: InputDecoration(hintText: 'User Name'),
+                ),
                 color: Colors.white,
               ),
               Container(
                 margin: EdgeInsets.all(10),
                 height: 30,
-                width: 100,
-                child: Center(child: Text(' Password')),
+                width: 200,
+                child: TextField(
+                  textAlign: TextAlign.center,
+                  decoration: InputDecoration(hintText: 'Password'),
+                ),
                 color: Colors.white,
               ),
-             ElevatedButton(
+              ElevatedButton(
                   style:
                       ElevatedButton.styleFrom(backgroundColor: Colors.green),
                   onPressed: () => {print("loge in")},
                   child: Text("Loge In")),
-
-              Container( margin: EdgeInsets.all(10),),
+              Container(
+                margin: EdgeInsets.all(10),
+              ),
               ElevatedButton(
-                
                   style:
                       ElevatedButton.styleFrom(backgroundColor: Colors.green),
                   onPressed: () => {print("Sign in")},
