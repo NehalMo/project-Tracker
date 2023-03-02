@@ -16,7 +16,8 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        drawer: Drawer(),appBar: AppBar(
+        drawer: Drawer(),
+        appBar: AppBar(
           title: Text("project Tracker"),
           centerTitle: true,
           backgroundColor: Color.fromARGB(221, 2, 97, 45),

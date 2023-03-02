@@ -9,7 +9,7 @@ class Intro extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [ Container(
-      height: 200,
+      height: 60,
       width: 200,
       child: Image(
         image: AssetImage("images/amn.png"),
