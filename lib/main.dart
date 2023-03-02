@@ -1,4 +1,7 @@
 import 'dart:html';
+import 'createAccount.dart';
+import 'intro.dart';
+import 'login.dart';
 
 import 'package:flutter/material.dart';
 
@@ -13,7 +16,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
+        drawer: Drawer(),appBar: AppBar(
           title: Text("project Tracker"),
           centerTitle: true,
           backgroundColor: Color.fromARGB(221, 2, 97, 45),
@@ -22,53 +25,18 @@ class MainApp extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                height: 200,
-                width: 200,
-                child: Image(
-                  image: AssetImage("images/amn.png"),
-                ),
-              ),
+
+        
+
+
+              Intro(),
+             
               Container(
                 margin: EdgeInsets.all(15),
               ),
-              Container(
-                height: 30,
-                width: 230,
-                child: TextField(
-                  textAlign: TextAlign.center,
-                  decoration: InputDecoration(hintText: 'User Name'),
-                ),
-                color: Colors.white,
-              ),
-              Container(
-                margin: EdgeInsets.all(10),
-                height: 30,
-                width: 230,
-                child: TextField(
-                  textAlign: TextAlign.center,
-                  decoration: InputDecoration(
-                    hintText: 'Password',
-                  ),
-                ),
-                color: Colors.white,
-              ),
-              ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 2, 80, 5)),
-                  onPressed: () => {print("log in")},
-                  child: Text("   Log In   ")),
-              Container(
-                margin: EdgeInsets.all(2),
-              ),
-              ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 2, 80, 5)),
-                  onPressed: () => {print("Sign in")},
-                  child: Text("   sign in  ")),
-              Container(
-                margin: EdgeInsets.all(9),
-              ),
+
+              Login(),
+             
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -83,20 +51,7 @@ class MainApp extends StatelessWidget {
               Container(
                 margin: EdgeInsets.all(8),
               ),
-              Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                ElevatedButton(
-                  style:
-                      ElevatedButton.styleFrom(backgroundColor: Colors.white),
-                  onPressed: () => {print("Sign in")},
-                  child: Container(
-                      width: 200,
-                      height: 20,
-                      child: Image.asset('images/GoogleLogo.svg.png')),
-                )
-              ]),
-              Container(
-                margin: EdgeInsets.all(8),
-              ),
+              CreateAccount(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -118,3 +73,8 @@ class MainApp extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
