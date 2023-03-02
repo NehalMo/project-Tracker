@@ -11,8 +11,8 @@ class CreateAccount extends StatelessWidget {
       children: [
         Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           ElevatedButton(
-            style:
-                ElevatedButton.styleFrom(backgroundColor: Colors.white),
+            style: ElevatedButton.styleFrom(
+                backgroundColor: Color.fromARGB(255, 49, 47, 47)),
             onPressed: () => {print("Sign in")},
             child: Container(
                 width: 200,
