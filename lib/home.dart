@@ -15,6 +15,9 @@ class _HomeState extends State<Home> {
       drawer: Drawer(),
       appBar: AppBar(
         title: Text("project Tracker"),
+        leading: Image(
+          image: AssetImage("images/amn.png"),
+        ),
         centerTitle: true,
         backgroundColor: Color.fromARGB(221, 2, 97, 45),
       ),
