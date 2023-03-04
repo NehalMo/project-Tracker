@@ -32,6 +32,12 @@ class _HomeState extends State<Home> {
                     backgroundColor: Color.fromARGB(255, 2, 80, 5)),
                 onPressed: () => {print("+dashboard")},
                 child: Text(" + dashBord ")),
+            Container(
+              margin: EdgeInsets.all(13),
+              height: 500,
+              width: 400,
+              color: Color.fromARGB(255, 181, 245, 195),
+            ),
           ],
         ),
       ),
