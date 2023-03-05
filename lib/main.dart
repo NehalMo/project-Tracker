@@ -2,6 +2,7 @@ import 'dart:html';
 import 'createAccount.dart';
 import 'intro.dart';
 import 'login.dart';
+import 'Counter.dart';
 
 import 'package:flutter/material.dart';
 
@@ -26,18 +27,12 @@ class MainApp extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-
-        
-
-
               Intro(),
-             
               Container(
                 margin: EdgeInsets.all(15),
               ),
-
               Login(),
-             
+              MyCounter(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -74,8 +69,3 @@ class MainApp extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
