@@ -12,7 +12,7 @@ class CreateAccount extends StatelessWidget {
         Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 49, 47, 47)),
+                backgroundColor: Colors.white),
             onPressed: () => {print("Sign in")},
             child: Container(
                 width: 200,
