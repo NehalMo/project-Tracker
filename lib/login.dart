@@ -68,14 +68,6 @@ class _LoginState extends State<Login> {
             onPressed: checkUsernamePassword,
             child: Text("   Log In   ")),
         Container(
-          margin: EdgeInsets.all(2),
-        ),
-        ElevatedButton(
-            style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 2, 80, 5)),
-            onPressed: () => {print("sign in")},
-            child: Text("   sign in  ")),
-        Container(
           margin: EdgeInsets.all(9),
         ),
       ],
