@@ -18,7 +18,7 @@ class _HomeState extends State<Home> {
         centerTitle: true,
         backgroundColor: Color.fromARGB(221, 2, 97, 45),
       ),
-      endDrawer: MyDrawer(),
+      drawer: MyDrawer(),
       body: Center(
         child: Column(
           children: [
