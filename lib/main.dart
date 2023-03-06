@@ -4,6 +4,7 @@ import 'intro.dart';
 import 'login.dart';
 import 'Counter.dart';
 
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -22,9 +23,10 @@ class MainApp extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Color.fromARGB(221, 2, 97, 45),
           leading: Image(
-            image: AssetImage("images/amn3.png"),
+            image: AssetImage("images/amn.png"),
           ),
         ),
+       
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

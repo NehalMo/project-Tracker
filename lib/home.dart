@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'MyDrawer.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -12,12 +13,12 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 247, 247, 245),
-      drawer: Drawer(),
       appBar: AppBar(
         title: Text("project Tracker"),
         centerTitle: true,
         backgroundColor: Color.fromARGB(221, 2, 97, 45),
       ),
+      endDrawer: MyDrawer(),
       body: Center(
         child: Column(
           children: [
