@@ -17,7 +17,10 @@ class _LoginState extends State<Login> {
   bool correctEntry = true;
   String username = "";
   String password = "";
-
+  Icon ic = Icon(Icons.remove_red_eye_outlined);
+  bool pass = true;
+  var username1 = TextEditingController();
+  var password1 = TextEditingController();
   checkUsernamePassword() {
     setState(() {
       if (username == "" || password == "") {
@@ -65,39 +68,80 @@ class _LoginState extends State<Login> {
                   ),
                 ),
                 Container(
-                  height: 30,
-                  width: 230,
+                  margin: EdgeInsets.all(14),
+                  height: 35,
+                  width: 300,
                   color: correctEntry ? Colors.white : Colors.red,
                   child: TextField(
+                    onSubmitted: (vusername) {
+                      print("v= $vusername");
+                    },
+                    controller: username1,
                     onChanged: (value) => {username = value},
                     textAlign: TextAlign.center,
-                    decoration: InputDecoration(hintText: 'Username'),
+                    decoration: InputDecoration(
+                        hintText: 'Enter Username',
+                        labelText: "Username",
+                        suffixIcon: Icon(Icons.person),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(25))),
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.all(10),
-                  height: 30,
-                  width: 230,
+                  margin: EdgeInsets.all(1),
+                  height: 35,
+                  width: 300,
                   color: correctEntry ? Colors.white : Colors.red,
                   child: TextField(
+                    onSubmitted: (vpassword) {
+                      print("v= $vpassword");
+                    },
+                    obscureText: pass,
+                    controller: password1,
                     onChanged: (value) => {password = value},
                     textAlign: TextAlign.center,
                     decoration: InputDecoration(
-                      hintText: 'Password',
-                    ),
+                        hintText: 'Enter Password',
+                        labelText: "password",
+                        suffixIcon: IconButton(
+                          icon: ic,
+                          onPressed: () {
+                            setState(() {
+                              pass = !pass;
+                              if (pass == false) {
+                                ic = Icon(Icons.remove_red_eye_rounded);
+                              } else {
+                                ic = Icon(Icons.remove_red_eye_outlined);
+                              }
+                            });
+                          },
+                        ),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(25))),
                   ),
                 ),
-                ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: Color.fromARGB(255, 2, 80, 5)),
-                    onPressed: checkUsernamePassword,
-                    child: Text("   Log In   ")),
+                SizedBox(
+                  height: 6,
+                ),
                 Container(
-                  margin: EdgeInsets.all(9),
+                  width: 120,
+                  child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Color.fromARGB(255, 2, 80, 5)),
+                      onPressed: checkUsernamePassword,
+                      child: (Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text("   Log In   "),
+                          Icon(Icons.login_outlined)
+                        ],
+                      ))),
+                ),
+                Container(
+                  margin: EdgeInsets.all(4),
                 ),
               ],
             ),
-            MyCounter(),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -110,7 +154,7 @@ class _LoginState extends State<Login> {
               ],
             ),
             Container(
-              margin: EdgeInsets.all(8),
+              margin: EdgeInsets.all(4),
             ),
             CreateAccount(),
             Row(
@@ -126,10 +170,11 @@ class _LoginState extends State<Login> {
                 ),
               ],
             ),
+            MyCounter(),
           ],
         ),
       ),
-      backgroundColor: Color.fromARGB(255, 241, 244, 243),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
     );
   }
 }
