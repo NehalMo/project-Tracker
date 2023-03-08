@@ -7,23 +7,13 @@ class CreateAccount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white),
-            onPressed: () => {print("Sign in")},
-            child: Container(
-                width: 200,
-                height: 20,
-                child: Image.asset('images/GoogleLogo.svg.png')),
-          )
-        ]),
-        Container(
-          margin: EdgeInsets.all(8),
-        ),
-      ],
+    return Scaffold(
+      backgroundColor: Color.fromARGB(255, 247, 247, 245),
+      appBar: AppBar(
+        title: Text("project Tracker"),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(221, 2, 97, 45),
+      ),
     );
   }
 }

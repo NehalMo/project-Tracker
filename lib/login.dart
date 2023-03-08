@@ -156,13 +156,36 @@ class _LoginState extends State<Login> {
             Container(
               margin: EdgeInsets.all(4),
             ),
-            CreateAccount(),
+            Column(
+              children: [
+                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  ElevatedButton(
+                    style:
+                        ElevatedButton.styleFrom(backgroundColor: Colors.white),
+                    onPressed: () => {print("Sign in")},
+                    child: Container(
+                        width: 200,
+                        height: 20,
+                        child: Image.asset('images/GoogleLogo.svg.png')),
+                  )
+                ]),
+                Container(
+                  margin: EdgeInsets.all(8),
+                ),
+              ],
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text('do you have an account ?'),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CreateAccount(),
+                        ));
+                  },
                   child: Text('Create new account'),
                   style: TextButton.styleFrom(
                     primary: Colors.blue,
@@ -170,7 +193,6 @@ class _LoginState extends State<Login> {
                 ),
               ],
             ),
-            MyCounter(),
           ],
         ),
       ),
