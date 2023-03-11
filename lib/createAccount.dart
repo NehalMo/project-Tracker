@@ -37,7 +37,7 @@ class _CreateAccountState extends State<CreateAccount> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 247, 247, 245),
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text("project Tracker"),
         centerTitle: true,
@@ -75,7 +75,7 @@ class _CreateAccountState extends State<CreateAccount> {
               ),
             ),
             Container(
-              margin: EdgeInsets.all(10),
+              margin: EdgeInsets.all(5),
               height: 35,
               width: 300,
               color: correctEntry ? Colors.white : Colors.red,
@@ -93,7 +93,7 @@ class _CreateAccountState extends State<CreateAccount> {
               ),
             ),
             Container(
-              margin: EdgeInsets.all(10),
+              margin: EdgeInsets.all(5),
               height: 35,
               width: 300,
               color: correctEntry ? Colors.white : Colors.red,
@@ -111,7 +111,7 @@ class _CreateAccountState extends State<CreateAccount> {
               ),
             ),
             Container(
-              margin: EdgeInsets.all(10),
+              margin: EdgeInsets.all(5),
               height: 35,
               width: 300,
               color: correctEntry ? Colors.white : Colors.red,
@@ -129,7 +129,7 @@ class _CreateAccountState extends State<CreateAccount> {
               ),
             ),
             Container(
-              margin: EdgeInsets.all(10),
+              margin: EdgeInsets.all(5),
               height: 35,
               width: 300,
               color: correctEntry ? Colors.white : Colors.red,
@@ -161,7 +161,7 @@ class _CreateAccountState extends State<CreateAccount> {
               ),
             ),
             Container(
-              margin: EdgeInsets.all(10),
+              margin: EdgeInsets.all(5),
               height: 35,
               width: 300,
               color: correctEntry ? Colors.white : Colors.red,

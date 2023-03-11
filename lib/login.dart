@@ -44,7 +44,7 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("project Tracker"),
+        title: Text("projects Tracker"),
         centerTitle: true,
         backgroundColor: Color.fromARGB(221, 2, 97, 45),
         leading: Image(
@@ -73,6 +73,7 @@ class _LoginState extends State<Login> {
                   width: 300,
                   color: correctEntry ? Colors.white : Colors.red,
                   child: TextField(
+                    keyboardType: TextInputType.name,
                     onSubmitted: (vusername) {
                       print("v= $vusername");
                     },
@@ -84,7 +85,7 @@ class _LoginState extends State<Login> {
                         labelText: "Username",
                         suffixIcon: Icon(Icons.person),
                         border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(25))),
+                            borderRadius: BorderRadius.circular(12))),
                   ),
                 ),
                 Container(
@@ -93,6 +94,7 @@ class _LoginState extends State<Login> {
                   width: 300,
                   color: correctEntry ? Colors.white : Colors.red,
                   child: TextField(
+                    keyboardType: TextInputType.name,
                     onSubmitted: (vpassword) {
                       print("v= $vpassword");
                     },
@@ -117,7 +119,7 @@ class _LoginState extends State<Login> {
                           },
                         ),
                         border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(25))),
+                            borderRadius: BorderRadius.circular(12))),
                   ),
                 ),
                 SizedBox(
@@ -196,7 +198,7 @@ class _LoginState extends State<Login> {
           ],
         ),
       ),
-      backgroundColor: Color.fromARGB(255, 255, 255, 255),
+      backgroundColor: Colors.white,
     );
   }
 }

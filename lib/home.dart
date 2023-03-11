@@ -12,9 +12,9 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 247, 247, 245),
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("project Tracker"),
+        title: Text("Home"),
         centerTitle: true,
         backgroundColor: Color.fromARGB(221, 2, 97, 45),
       ),
@@ -25,11 +25,6 @@ class _HomeState extends State<Home> {
             Container(
               margin: EdgeInsets.all(15),
             ),
-            ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 2, 80, 5)),
-                onPressed: () => {print("+dashboard")},
-                child: Text(" + dashBord ")),
             Container(
               margin: EdgeInsets.all(13),
               height: 500,

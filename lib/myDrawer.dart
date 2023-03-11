@@ -44,12 +44,13 @@ class _MyDrawerState extends State<MyDrawer> {
       children: [
         UserAccountsDrawerHeader(
           currentAccountPicture: CircleAvatar(
-            backgroundColor: Color.fromARGB(255, 24, 103, 241),
-            child: Text("a"),
+            backgroundColor: Color.fromARGB(255, 255, 254, 255),
+            backgroundImage: AssetImage("images/Male User.png"),
+            child: Text(""),
           ),
           accountName: Text("Aisha"),
           accountEmail: Text("aa@gmail.com"),
-          decoration: BoxDecoration(color: Color.fromARGB(255, 168, 243, 205)),
+          decoration: BoxDecoration(color: Color.fromARGB(221, 2, 97, 45)),
         ),
         ListTile(
           onTap: () => openProfileScreen(context),
