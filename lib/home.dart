@@ -25,11 +25,23 @@ class _HomeState extends State<Home> {
             Container(
               margin: EdgeInsets.all(15),
             ),
-            Container(
-              margin: EdgeInsets.all(13),
-              height: 500,
-              width: 400,
-              color: Color.fromARGB(255, 181, 245, 195),
+            Column(
+              children: [
+                Container(
+                  width: 120,
+                  child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Color.fromARGB(255, 2, 80, 5)),
+                      onPressed: () {},
+                      child: (Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Icon(Icons.add),
+                          Text(" board   "),
+                        ],
+                      ))),
+                ),
+              ],
             ),
           ],
         ),
