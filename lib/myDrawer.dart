@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:project_tracker/board.dart';
 import 'home.dart';
 import 'Myprofile.dart';
 import 'Login.dart';
+import 'board.dart';
 
 class MyDrawer extends StatefulWidget {
   const MyDrawer({
@@ -37,6 +39,14 @@ class _MyDrawerState extends State<MyDrawer> {
         ));
   }
 
+  void openBoardScreen(BuildContext context) {
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => Board(),
+        ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -63,6 +73,12 @@ class _MyDrawerState extends State<MyDrawer> {
           leading: Icon(Icons.home),
           title: Text("Home"),
           subtitle: Text("this is the Home page"),
+        ),
+        ListTile(
+          onTap: () => openBoardScreen(context),
+          leading: Icon(Icons.file_open),
+          title: Text("Board"),
+          subtitle: Text("this is the board"),
         ),
         ListTile(
           onTap: () => openLoginScreen(context),
