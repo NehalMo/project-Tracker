@@ -33,50 +33,62 @@ class _CreateAccountState extends State<CreateAccount> {
     setState(() {
       if (FirstName == "") {
         errorMessage = Container(
-          color: Colors.red,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("please enter Your FirstName"),
+            child: Text(
+              "* Please Enter Your FirstName *",
+              style: TextStyle(color: Colors.red),
+            ),
           ),
         );
       } else if (LastName == "") {
         errorMessage = Container(
-          color: Colors.red,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("please enter Your LastName"),
+            child: Text(
+              "* Please Enter Your LastName *",
+              style: TextStyle(color: Colors.red),
+            ),
           ),
         );
       } else if (Email == "") {
         errorMessage = Container(
-          color: Colors.red,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("please enter Your Emaile"),
+            child: Text(
+              "* Please Enter Your Emaile *",
+              style: TextStyle(color: Colors.red),
+            ),
           ),
         );
       } else if (username == "") {
         errorMessage = Container(
-          color: Colors.red,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("please enter a username"),
+            child: Text(
+              "* Please Enter a username *",
+              style: TextStyle(color: Colors.red),
+            ),
           ),
         );
       } else if (password == "") {
         errorMessage = Container(
-          color: Colors.red,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("please enter a password"),
+            child: Text(
+              "* Please Enter a password *",
+              style: TextStyle(color: Colors.red),
+            ),
           ),
         );
       } else if (password != conpassword) {
         errorMessage = Container(
-          color: Colors.red,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text("confirm Password not Equals to main Password"),
+            child: Text(
+              "* Password Doesn’t Match *",
+              style: TextStyle(color: Colors.red),
+            ),
           ),
         );
       } else {
