@@ -24,19 +24,73 @@ class _CreateAccountState extends State<CreateAccount> {
   var username1 = TextEditingController();
   var password1 = TextEditingController();
   var conpassword1 = TextEditingController();
+
+  Widget errorMessage = SizedBox(
+    height: 0,
+  );
+
   checkUsernamePassword() {
     setState(() {
-      if (FirstName == "" ||
-          LastName == "" ||
-          Email == "" ||
-          username == "" ||
-          password == "" ||
-          conpassword == "") {
-        correctEntry = false;
+      if (FirstName == "") {
+        errorMessage = Container(
+          color: Colors.red,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("please enter Your FirstName"),
+          ),
+        );
+      } else if (LastName == "") {
+        errorMessage = Container(
+          color: Colors.red,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("please enter Your LastName"),
+          ),
+        );
+      } else if (Email == "") {
+        errorMessage = Container(
+          color: Colors.red,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("please enter Your Emaile"),
+          ),
+        );
+      } else if (username == "") {
+        errorMessage = Container(
+          color: Colors.red,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("please enter a username"),
+          ),
+        );
+      } else if (password == "") {
+        errorMessage = Container(
+          color: Colors.red,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("please enter a password"),
+          ),
+        );
+      } else if (password != conpassword) {
+        errorMessage = Container(
+          color: Colors.red,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("confirm Password not Equals to main Password"),
+          ),
+        );
       } else {
         correctEntry = true;
         goToLogin();
       }
+    });
+  }
+
+  void removeErrorMessage() {
+    setState(() {
+      errorMessage = SizedBox(
+        height: 0,
+      );
     });
   }
 
@@ -74,12 +128,12 @@ class _CreateAccountState extends State<CreateAccount> {
               margin: EdgeInsets.all(10),
               height: 35,
               width: 300,
-              color: correctEntry ? Colors.white : Colors.red,
               child: TextField(
                 onSubmitted: (vFirstName) {
                   print("v= $vFirstName");
                 },
                 controller: FirstName1,
+                onTap: removeErrorMessage,
                 onChanged: (value) => {FirstName = value},
                 textAlign: TextAlign.center,
                 decoration: InputDecoration(
@@ -92,12 +146,12 @@ class _CreateAccountState extends State<CreateAccount> {
               margin: EdgeInsets.all(5),
               height: 35,
               width: 300,
-              color: correctEntry ? Colors.white : Colors.red,
               child: TextField(
                 onSubmitted: (vLastName) {
                   print("v= $vLastName");
                 },
                 controller: LastName1,
+                onTap: removeErrorMessage,
                 onChanged: (value) => {LastName = value},
                 textAlign: TextAlign.center,
                 decoration: InputDecoration(
@@ -110,12 +164,12 @@ class _CreateAccountState extends State<CreateAccount> {
               margin: EdgeInsets.all(5),
               height: 35,
               width: 300,
-              color: correctEntry ? Colors.white : Colors.red,
               child: TextField(
                 onSubmitted: (vEmail) {
                   print("v= $vEmail");
                 },
                 controller: Email1,
+                onTap: removeErrorMessage,
                 onChanged: (value) => {Email = value},
                 textAlign: TextAlign.center,
                 decoration: InputDecoration(
@@ -128,12 +182,12 @@ class _CreateAccountState extends State<CreateAccount> {
               margin: EdgeInsets.all(5),
               height: 35,
               width: 300,
-              color: correctEntry ? Colors.white : Colors.red,
               child: TextField(
                 onSubmitted: (vusername) {
                   print("v= $vusername");
                 },
                 controller: username1,
+                onTap: removeErrorMessage,
                 onChanged: (value) => {username = value},
                 textAlign: TextAlign.center,
                 decoration: InputDecoration(
@@ -146,13 +200,13 @@ class _CreateAccountState extends State<CreateAccount> {
               margin: EdgeInsets.all(5),
               height: 35,
               width: 300,
-              color: correctEntry ? Colors.white : Colors.red,
               child: TextField(
                 onSubmitted: (vpassword) {
                   print("v= $vpassword");
                 },
                 obscureText: pass,
                 controller: password1,
+                onTap: removeErrorMessage,
                 onChanged: (value) => {password = value},
                 textAlign: TextAlign.center,
                 decoration: InputDecoration(
@@ -178,13 +232,13 @@ class _CreateAccountState extends State<CreateAccount> {
               margin: EdgeInsets.all(5),
               height: 35,
               width: 300,
-              color: correctEntry ? Colors.white : Colors.red,
               child: TextField(
                 onSubmitted: (vconpassword) {
                   print("v= $vconpassword");
                 },
                 obscureText: pass,
                 controller: conpassword1,
+                onTap: removeErrorMessage,
                 onChanged: (value) => {conpassword = value},
                 textAlign: TextAlign.center,
                 decoration: InputDecoration(
@@ -206,6 +260,7 @@ class _CreateAccountState extends State<CreateAccount> {
                         borderRadius: BorderRadius.circular(25))),
               ),
             ),
+            errorMessage,
             SizedBox(
               height: 6,
             ),
