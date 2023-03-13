@@ -26,12 +26,26 @@ class _CreateAccountState extends State<CreateAccount> {
   var conpassword1 = TextEditingController();
   checkUsernamePassword() {
     setState(() {
-      if (username == "" || password == "") {
+      if (FirstName == "" ||
+          LastName == "" ||
+          Email == "" ||
+          username == "" ||
+          password == "" ||
+          conpassword == "") {
         correctEntry = false;
       } else {
         correctEntry = true;
+        goToLogin();
       }
     });
+  }
+
+  goToLogin() {
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => Login(),
+        ));
   }
 
   @override
@@ -200,13 +214,7 @@ class _CreateAccountState extends State<CreateAccount> {
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Color.fromARGB(255, 2, 80, 5)),
-                  onPressed: () => {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Login(),
-                            ))
-                      },
+                  onPressed: checkUsernamePassword,
                   child: (Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
