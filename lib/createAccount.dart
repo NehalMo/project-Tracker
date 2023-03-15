@@ -16,7 +16,8 @@ class _CreateAccountState extends State<CreateAccount> {
   String username = "";
   String password = "";
   String conpassword = "";
-  Icon ic = Icon(Icons.remove_red_eye_outlined);
+  Icon ic = const Icon(Icons.remove_red_eye_outlined);
+
   bool pass = true;
   var FirstName1 = TextEditingController();
   var LastName1 = TextEditingController();
@@ -25,7 +26,7 @@ class _CreateAccountState extends State<CreateAccount> {
   var password1 = TextEditingController();
   var conpassword1 = TextEditingController();
 
-  Widget errorMessage = SizedBox(
+  Widget errorMessage = const SizedBox(
     height: 0,
   );
 
@@ -33,8 +34,8 @@ class _CreateAccountState extends State<CreateAccount> {
     setState(() {
       if (FirstName == "") {
         errorMessage = Container(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
+          child: const Padding(
+            padding: EdgeInsets.all(8.0),
             child: Text(
               "* Please Enter Your FirstName *",
               style: TextStyle(color: Colors.red),
@@ -43,8 +44,8 @@ class _CreateAccountState extends State<CreateAccount> {
         );
       } else if (LastName == "") {
         errorMessage = Container(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
+          child: const Padding(
+            padding: EdgeInsets.all(8.0),
             child: Text(
               "* Please Enter Your LastName *",
               style: TextStyle(color: Colors.red),
@@ -53,8 +54,8 @@ class _CreateAccountState extends State<CreateAccount> {
         );
       } else if (Email == "") {
         errorMessage = Container(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
+          child: const Padding(
+            padding: EdgeInsets.all(8.0),
             child: Text(
               "* Please Enter Your Emaile *",
               style: TextStyle(color: Colors.red),
@@ -63,8 +64,8 @@ class _CreateAccountState extends State<CreateAccount> {
         );
       } else if (username == "") {
         errorMessage = Container(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
+          child: const Padding(
+            padding: EdgeInsets.all(8.0),
             child: Text(
               "* Please Enter a username *",
               style: TextStyle(color: Colors.red),
@@ -73,8 +74,8 @@ class _CreateAccountState extends State<CreateAccount> {
         );
       } else if (password == "") {
         errorMessage = Container(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
+          child: const Padding(
+            padding: EdgeInsets.all(8.0),
             child: Text(
               "* Please Enter a password *",
               style: TextStyle(color: Colors.red),
@@ -83,8 +84,8 @@ class _CreateAccountState extends State<CreateAccount> {
         );
       } else if (password != conpassword) {
         errorMessage = Container(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
+          child: const Padding(
+            padding: EdgeInsets.all(8.0),
             child: Text(
               "* Password Doesn’t Match *",
               style: TextStyle(color: Colors.red),
@@ -92,15 +93,26 @@ class _CreateAccountState extends State<CreateAccount> {
           ),
         );
       } else {
+        // ignore: prefer_const_constructors
+        errorMessage = Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            " User Registered Successfully ",
+            style: TextStyle(
+              color: Color.fromARGB(255, 23, 97, 49),
+            ),
+          ),
+        );
+
+        Future.delayed(const Duration(seconds: 2), goToLogin);
         correctEntry = true;
-        goToLogin();
       }
     });
   }
 
   void removeErrorMessage() {
     setState(() {
-      errorMessage = SizedBox(
+      errorMessage = const SizedBox(
         height: 0,
       );
     });
@@ -110,7 +122,7 @@ class _CreateAccountState extends State<CreateAccount> {
     Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => Login(),
+          builder: (context) => const Login(),
         ));
   }
 
@@ -119,25 +131,25 @@ class _CreateAccountState extends State<CreateAccount> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("project Tracker"),
+        title: const Text("project Tracker"),
         centerTitle: true,
-        backgroundColor: Color.fromARGB(221, 2, 97, 45),
+        backgroundColor: const Color.fromARGB(221, 2, 97, 45),
       ),
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Container(
-            margin: EdgeInsets.all(15),
+            margin: const EdgeInsets.all(15),
           ),
           Column(children: [
             Container(
               height: 170,
               width: 170,
-              child: Image(
+              child: const Image(
                 image: AssetImage("images/amn3.png"),
               ),
             ),
             Container(
-              margin: EdgeInsets.all(10),
+              margin: const EdgeInsets.all(10),
               height: 35,
               width: 300,
               child: TextField(
@@ -151,11 +163,11 @@ class _CreateAccountState extends State<CreateAccount> {
                 decoration: InputDecoration(
                     labelText: "Enter Your First Name",
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25))),
+                        borderRadius: BorderRadius.circular(12))),
               ),
             ),
             Container(
-              margin: EdgeInsets.all(5),
+              margin: const EdgeInsets.all(5),
               height: 35,
               width: 300,
               child: TextField(
@@ -169,11 +181,11 @@ class _CreateAccountState extends State<CreateAccount> {
                 decoration: InputDecoration(
                     labelText: "Enter Your Last Name",
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25))),
+                        borderRadius: BorderRadius.circular(12))),
               ),
             ),
             Container(
-              margin: EdgeInsets.all(5),
+              margin: const EdgeInsets.all(5),
               height: 35,
               width: 300,
               child: TextField(
@@ -187,11 +199,11 @@ class _CreateAccountState extends State<CreateAccount> {
                 decoration: InputDecoration(
                     labelText: "Enter Your Email",
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25))),
+                        borderRadius: BorderRadius.circular(12))),
               ),
             ),
             Container(
-              margin: EdgeInsets.all(5),
+              margin: const EdgeInsets.all(5),
               height: 35,
               width: 300,
               child: TextField(
@@ -205,11 +217,11 @@ class _CreateAccountState extends State<CreateAccount> {
                 decoration: InputDecoration(
                     labelText: "Enter User Name",
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25))),
+                        borderRadius: BorderRadius.circular(12))),
               ),
             ),
             Container(
-              margin: EdgeInsets.all(5),
+              margin: const EdgeInsets.all(5),
               height: 35,
               width: 300,
               child: TextField(
@@ -229,19 +241,19 @@ class _CreateAccountState extends State<CreateAccount> {
                         setState(() {
                           pass = !pass;
                           if (pass == false) {
-                            ic = Icon(Icons.remove_red_eye_rounded);
+                            ic = const Icon(Icons.remove_red_eye_rounded);
                           } else {
-                            ic = Icon(Icons.remove_red_eye_outlined);
+                            ic = const Icon(Icons.remove_red_eye_outlined);
                           }
                         });
                       },
                     ),
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25))),
+                        borderRadius: BorderRadius.circular(12))),
               ),
             ),
             Container(
-              margin: EdgeInsets.all(5),
+              margin: const EdgeInsets.all(5),
               height: 35,
               width: 300,
               child: TextField(
@@ -261,31 +273,31 @@ class _CreateAccountState extends State<CreateAccount> {
                         setState(() {
                           pass = !pass;
                           if (pass == false) {
-                            ic = Icon(Icons.remove_red_eye_rounded);
+                            ic = const Icon(Icons.remove_red_eye_rounded);
                           } else {
-                            ic = Icon(Icons.remove_red_eye_outlined);
+                            ic = const Icon(Icons.remove_red_eye_outlined);
                           }
                         });
                       },
                     ),
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25))),
+                        borderRadius: BorderRadius.circular(12))),
               ),
             ),
             errorMessage,
-            SizedBox(
+            const SizedBox(
               height: 6,
             ),
             Container(
               width: 110,
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 2, 80, 5)),
+                      backgroundColor: const Color.fromARGB(255, 2, 80, 5)),
                   onPressed: checkUsernamePassword,
                   child: (Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text("   Sign Up   "),
+                      const Text("   Sign Up   "),
                     ],
                   ))),
             ),
