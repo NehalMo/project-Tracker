@@ -33,74 +33,116 @@ class _CreateAccountState extends State<CreateAccount> {
   checkUsernamePassword() {
     setState(() {
       if (FirstName == "") {
-        errorMessage = Container(
-          child: const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text(
-              "* Please Enter Your FirstName *",
-              style: TextStyle(color: Colors.red),
-            ),
+        errorMessage = Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.cancel),
+              Text(
+                " Please Enter Your FirstName ",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 222, 49, 37),
+                ),
+              ),
+            ],
           ),
         );
       } else if (LastName == "") {
-        errorMessage = Container(
-          child: const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text(
-              "* Please Enter Your LastName *",
-              style: TextStyle(color: Colors.red),
-            ),
+        errorMessage = Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.cancel),
+              Text(
+                " Please Enter Your LastName ",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 222, 49, 37),
+                ),
+              ),
+            ],
           ),
         );
       } else if (Email == "") {
-        errorMessage = Container(
-          child: const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text(
-              "* Please Enter Your Emaile *",
-              style: TextStyle(color: Colors.red),
-            ),
+        errorMessage = Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.cancel),
+              Text(
+                " Please Enter Your Emaile ",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 222, 49, 37),
+                ),
+              ),
+            ],
           ),
         );
       } else if (username == "") {
-        errorMessage = Container(
-          child: const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text(
-              "* Please Enter a username *",
-              style: TextStyle(color: Colors.red),
-            ),
+        errorMessage = Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.cancel),
+              Text(
+                " Please Enter a username ",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 222, 49, 37),
+                ),
+              ),
+            ],
           ),
         );
       } else if (password == "") {
-        errorMessage = Container(
-          child: const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text(
-              "* Please Enter a password *",
-              style: TextStyle(color: Colors.red),
-            ),
+        errorMessage = Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.cancel),
+              Text(
+                " Please Enter a password ",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 222, 49, 37),
+                ),
+              ),
+            ],
           ),
         );
       } else if (password != conpassword) {
-        errorMessage = Container(
-          child: const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text(
-              "* Password Doesn’t Match *",
-              style: TextStyle(color: Colors.red),
-            ),
+        errorMessage = Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.cancel),
+              Text(
+                " Password Doesn’t Match ",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 222, 49, 37),
+                ),
+              ),
+            ],
           ),
         );
       } else {
         // ignore: prefer_const_constructors
         errorMessage = Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Text(
-            " User Registered Successfully ",
-            style: TextStyle(
-              color: Color.fromARGB(255, 23, 97, 49),
-            ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.check),
+              Text(
+                " User Registered Successfully ",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 23, 97, 49),
+                ),
+              ),
+            ],
           ),
         );
 
