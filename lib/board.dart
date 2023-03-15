@@ -17,7 +17,7 @@ class _BoardState extends State<Board> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text(""),
+        title: Text("Board"),
         centerTitle: true,
         backgroundColor: Color.fromARGB(221, 6, 2, 83),
       ),

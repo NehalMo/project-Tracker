@@ -47,7 +47,7 @@ class _ChangePasswordState extends State<ChangePassword> {
       appBar: AppBar(
         title: Text("My profile"),
         centerTitle: true,
-        backgroundColor: Color.fromARGB(221, 65, 7, 112),
+        backgroundColor: Color.fromARGB(221, 6, 2, 83),
       ),
       drawer: MyDrawer(),
       body: ListView(
@@ -56,7 +56,7 @@ class _ChangePasswordState extends State<ChangePassword> {
             width: double.infinity,
             height: 160,
             decoration: BoxDecoration(
-              color: Color.fromARGB(221, 65, 7, 112),
+              color: Color.fromARGB(221, 6, 2, 83),
             ),
             child: Column(
               children: <Widget>[
