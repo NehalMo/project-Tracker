@@ -1,6 +1,7 @@
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/material.dart';
+import 'package:project_tracker/insertDataTable.dart';
 import 'MyDrawer.dart';
 
 class Board extends StatefulWidget {
@@ -34,7 +35,13 @@ class _BoardState extends State<Board> {
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Color.fromARGB(221, 6, 2, 83)),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => InsertDataTable(),
+                            ));
+                      },
                       child: (Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [

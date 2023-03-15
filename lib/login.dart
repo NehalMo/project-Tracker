@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_tracker/board.dart';
 import 'package:project_tracker/home.dart';
 import 'home.dart';
 import 'Counter.dart';
@@ -36,7 +37,7 @@ class _LoginState extends State<Login> {
     Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => Home(),
+          builder: (context) => Board(),
         ));
   }
 
