@@ -16,7 +16,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Text("Home"),
         centerTitle: true,
-        backgroundColor: Color.fromARGB(221, 2, 97, 45),
+        backgroundColor: Color.fromARGB(221, 6, 2, 83),
       ),
       drawer: MyDrawer(),
       body: Center(

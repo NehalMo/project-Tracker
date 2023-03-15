@@ -46,7 +46,7 @@ class _LoginState extends State<Login> {
       appBar: AppBar(
         title: Text("projects Tracker"),
         centerTitle: true,
-        backgroundColor: Color.fromARGB(221, 2, 97, 45),
+        backgroundColor: Color.fromARGB(221, 6, 2, 83),
         leading: Image(
           image: AssetImage("images/amn3.png"),
         ),
@@ -56,17 +56,17 @@ class _LoginState extends State<Login> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
+              height: 170,
+              width: 170,
+              child: const Image(
+                image: AssetImage("images/amn3.png"),
+              ),
+            ),
+            Container(
               margin: EdgeInsets.all(15),
             ),
             Column(
               children: [
-                Container(
-                  height: 170,
-                  width: 170,
-                  child: Image(
-                    image: AssetImage("images/amn3.png"),
-                  ),
-                ),
                 Container(
                   margin: EdgeInsets.all(14),
                   height: 35,
@@ -129,7 +129,7 @@ class _LoginState extends State<Login> {
                   width: 120,
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: Color.fromARGB(255, 2, 80, 5)),
+                          backgroundColor: Color.fromARGB(221, 6, 2, 83)),
                       onPressed: checkUsernamePassword,
                       child: (Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -151,7 +151,7 @@ class _LoginState extends State<Login> {
                 Text(' or ',
                     style: TextStyle(
                         fontWeight: FontWeight.w800,
-                        color: Color.fromARGB(237, 11, 6, 6))),
+                        color: Color.fromARGB(221, 34, 20, 78))),
                 Text('----'),
               ],
             ),
@@ -190,7 +190,7 @@ class _LoginState extends State<Login> {
                   },
                   child: Text('Create new account'),
                   style: TextButton.styleFrom(
-                    primary: Colors.blue,
+                    primary: Color.fromARGB(221, 6, 2, 83),
                   ),
                 ),
               ],

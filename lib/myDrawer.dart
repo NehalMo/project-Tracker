@@ -50,43 +50,44 @@ class _MyDrawerState extends State<MyDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+        width: 260,
         child: Column(
-      children: [
-        UserAccountsDrawerHeader(
-          currentAccountPicture: CircleAvatar(
-            backgroundColor: Color.fromARGB(255, 255, 254, 255),
-            backgroundImage: AssetImage("images/Male User.png"),
-            child: Text(""),
-          ),
-          accountName: Text("Aisha"),
-          accountEmail: Text("aa@gmail.com"),
-          decoration: BoxDecoration(color: Color.fromARGB(221, 2, 97, 45)),
-        ),
-        ListTile(
-          onTap: () => openProfileScreen(context),
-          leading: Icon(Icons.person),
-          title: Text("Profile"),
-          subtitle: Text("this is your Profile page"),
-        ),
-        ListTile(
-          onTap: () => openHomeScreen(context),
-          leading: Icon(Icons.home),
-          title: Text("Home"),
-          subtitle: Text("this is the Home page"),
-        ),
-        ListTile(
-          onTap: () => openBoardScreen(context),
-          leading: Icon(Icons.file_open),
-          title: Text("Board"),
-          subtitle: Text("this is the board"),
-        ),
-        ListTile(
-          onTap: () => openLoginScreen(context),
-          leading: Icon(Icons.logout),
-          title: Text("Log out"),
-          subtitle: Text("this is the Log out"),
-        ),
-      ],
-    ));
+          children: [
+            UserAccountsDrawerHeader(
+              currentAccountPicture: CircleAvatar(
+                backgroundColor: Color.fromARGB(221, 6, 2, 83),
+                backgroundImage: AssetImage("images/amn3.png"),
+                child: Text(""),
+              ),
+              accountName: Text("Nehal"),
+              accountEmail: Text("aa@gmail.com"),
+              decoration: BoxDecoration(color: Color.fromARGB(221, 6, 2, 83)),
+            ),
+            ListTile(
+              onTap: () => openProfileScreen(context),
+              leading: Icon(Icons.person),
+              title: Text("Profile"),
+              subtitle: Text("this is your Profile page"),
+            ),
+            ListTile(
+              onTap: () => openHomeScreen(context),
+              leading: Icon(Icons.home),
+              title: Text("Home"),
+              subtitle: Text("this is the Home page"),
+            ),
+            ListTile(
+              onTap: () => openBoardScreen(context),
+              leading: Icon(Icons.file_open),
+              title: Text("Board"),
+              subtitle: Text("this is the board"),
+            ),
+            ListTile(
+              onTap: () => openLoginScreen(context),
+              leading: Icon(Icons.logout),
+              title: Text("Log out"),
+              subtitle: Text("this is the Log out"),
+            ),
+          ],
+        ));
   }
 }

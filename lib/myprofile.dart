@@ -44,7 +44,7 @@ class _MyprofileState extends State<Myprofile> {
       appBar: AppBar(
         title: Text("My profile"),
         centerTitle: true,
-        backgroundColor: Color.fromARGB(221, 2, 97, 45),
+        backgroundColor: Color.fromARGB(221, 6, 2, 83),
       ),
       drawer: MyDrawer(),
       body: ListView(
@@ -53,7 +53,7 @@ class _MyprofileState extends State<Myprofile> {
             width: double.infinity,
             height: 160,
             decoration: BoxDecoration(
-              color: Color.fromARGB(221, 2, 97, 45),
+              color: Color.fromARGB(221, 6, 2, 83),
             ),
             child: Column(
               children: <Widget>[
@@ -62,16 +62,20 @@ class _MyprofileState extends State<Myprofile> {
                     CircleAvatar(
                       radius: 50,
                       backgroundImage: AssetImage("images/amn3.png"),
-                      backgroundColor: Colors.blueAccent,
+                      backgroundColor: Colors.white,
                     ),
                     Positioned(
-                        bottom: 3,
-                        right: 2,
-                        child: CircleAvatar(
-                          radius: 15,
-                          child: Icon(Icons.edit),
-                          backgroundColor: Colors.white,
-                        ))
+                      bottom: 3,
+                      right: 2,
+                      child: CircleAvatar(
+                        radius: 15,
+                        child: IconButton(
+                          icon: Icon(Icons.edit),
+                          onPressed: () {},
+                        ),
+                        backgroundColor: Colors.white,
+                      ),
+                    ),
                   ],
                 ),
                 SizedBox(
@@ -102,7 +106,7 @@ class _MyprofileState extends State<Myprofile> {
                     height: 30,
                     child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                            backgroundColor: Color.fromARGB(255, 2, 80, 5)),
+                            backgroundColor: Color.fromARGB(221, 6, 2, 83)),
                         onPressed: () {
                           Navigator.push(
                               context,

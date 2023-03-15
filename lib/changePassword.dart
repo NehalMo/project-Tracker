@@ -47,7 +47,7 @@ class _ChangePasswordState extends State<ChangePassword> {
       appBar: AppBar(
         title: Text("My profile"),
         centerTitle: true,
-        backgroundColor: Color.fromARGB(221, 2, 97, 45),
+        backgroundColor: Color.fromARGB(221, 65, 7, 112),
       ),
       drawer: MyDrawer(),
       body: ListView(
@@ -56,7 +56,7 @@ class _ChangePasswordState extends State<ChangePassword> {
             width: double.infinity,
             height: 160,
             decoration: BoxDecoration(
-              color: Color.fromARGB(221, 2, 97, 45),
+              color: Color.fromARGB(221, 65, 7, 112),
             ),
             child: Column(
               children: <Widget>[
@@ -65,7 +65,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                     CircleAvatar(
                       radius: 50,
                       backgroundImage: AssetImage("images/amn3.png"),
-                      backgroundColor: Colors.blueAccent,
+                      backgroundColor: Colors.white,
                     ),
                     Positioned(
                         bottom: 3,
@@ -171,7 +171,7 @@ class _ChangePasswordState extends State<ChangePassword> {
               width: 120,
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 2, 80, 5)),
+                      backgroundColor: Color.fromARGB(221, 6, 2, 83)),
                   onPressed: checkUsernamePassword,
                   child: (Row(
                     crossAxisAlignment: CrossAxisAlignment.center,

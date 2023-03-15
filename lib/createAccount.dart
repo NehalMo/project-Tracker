@@ -133,7 +133,7 @@ class _CreateAccountState extends State<CreateAccount> {
       appBar: AppBar(
         title: const Text("project Tracker"),
         centerTitle: true,
-        backgroundColor: const Color.fromARGB(221, 2, 97, 45),
+        backgroundColor: Color.fromARGB(221, 6, 2, 83),
       ),
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -292,7 +292,7 @@ class _CreateAccountState extends State<CreateAccount> {
               width: 110,
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromARGB(255, 2, 80, 5)),
+                      backgroundColor: Color.fromARGB(221, 6, 2, 83)),
                   onPressed: checkUsernamePassword,
                   child: (Row(
                     crossAxisAlignment: CrossAxisAlignment.center,

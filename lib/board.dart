@@ -18,7 +18,7 @@ class _BoardState extends State<Board> {
       appBar: AppBar(
         title: Text(""),
         centerTitle: true,
-        backgroundColor: Color.fromARGB(221, 2, 97, 45),
+        backgroundColor: Color.fromARGB(221, 6, 2, 83),
       ),
       drawer: MyDrawer(),
       body: Center(
@@ -33,7 +33,7 @@ class _BoardState extends State<Board> {
                   width: 120,
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: Color.fromARGB(255, 2, 80, 5)),
+                          backgroundColor: Color.fromARGB(221, 6, 2, 83)),
                       onPressed: () {},
                       child: (Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
