@@ -103,12 +103,12 @@ class _InsertDataTableState extends State<InsertDataTable> {
             addAutomaticKeepAlives: false,
             cacheExtent: 5.0,
             children: <Widget>[
-              Form(
+              Form(                     //Creates a container for form fields.
                 key: formKey,
                 child: Padding(
                   padding: EdgeInsets.all(10.0),
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,    //determines how Row and Column can position their children on their cross axes
                     children: <Widget>[
                        Container(
                       height: 50,
@@ -234,13 +234,12 @@ class _InsertDataTableState extends State<InsertDataTable> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(2.0),
                           ),
-                          child: Text(
-                            'Insert Project',
+                          child: Text( 'Insert Project',
                             style: TextStyle(
                               color: Colors.white,
                             ),
                           ),
-                          onPressed: validate,
+                          onPressed: validate, // Method used to validate the user data
                         ),
                       ),
                     ],
