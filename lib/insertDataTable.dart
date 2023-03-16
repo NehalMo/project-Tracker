@@ -75,7 +75,7 @@ class _InsertDataTableState extends State<InsertDataTable> {
     }
   }
 
-// Method to check the value of age, age is int or not
+// Method to check the value of the cost, the cost is int or not
   bool NotIntCheck(var N) {
     final V = int.tryParse(N);
 
