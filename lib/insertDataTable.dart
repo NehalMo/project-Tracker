@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter/material.dart';
 import 'myDrawer.dart';
+import 'home.dart';
 // Main method
 
 // Class person that initialize the data fields
@@ -97,140 +98,213 @@ class _InsertDataTableState extends State<InsertDataTable> {
           backgroundColor: Color.fromARGB(221, 6, 2, 83),
           title: Text("Board"),
         ),
-        body: ListView(
-          addAutomaticKeepAlives: false,
-          cacheExtent: 10.0,
-          children: <Widget>[
-            Form(
-              key: formKey,
-              child: Padding(
-                padding: EdgeInsets.all(2.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text("project number:"),
-                    TextField(
-                      controller: Num_Controller,
-                      enabled: false,
-                    ),
-                    Text("Project name"),
-                    TextFormField(
-                      controller: ProjectName_Controller,
-                      keyboardType: TextInputType.text,
-                      validator: (val) =>
-                          val?.length == 0 ? 'Enter project Name' : null,
-                    ),
-                    Text("Administration"),
-                    TextFormField(
-                      controller: Administration_Controller,
-                      keyboardType: TextInputType.text,
-                      validator: (val) =>
-                          val?.length == 0 ? 'Enter Administration' : null,
-                    ),
-                    Text("Project Manager"),
-                    TextFormField(
-                      controller: ProjectManager_Controller,
-                      keyboardType: TextInputType.text,
-                      validator: (val) =>
-                          val?.length == 0 ? 'Enter project Manager' : null,
-                    ),
-                    Text("Project State"),
-                    TextFormField(
-                      controller: ProjectState_Controller,
-                      keyboardType: TextInputType.text,
-                      validator: (val) =>
-                          val?.length == 0 ? 'Enter project State' : null,
-                    ),
-                    Text("Last Update"),
-                    TextFormField(
-                      controller: LastUpdate_Controller,
-                      keyboardType: TextInputType.text,
-                      validator: (val) =>
-                          val?.length == 0 ? 'Enter Last Update' : null,
-                    ),
-                    Text("The Cost"),
-                    TextFormField(
-                      controller: TheCost_Controller,
-                      maxLength: 10,
-                      keyboardType: TextInputType.number,
-                      validator: (val) => NotIntCheck(val)
-                          ? 'Enter The cost ,Number Required'
-                          : null,
-                    ),
-                    SizedBox(
-                      width: 200,
-                      child: MaterialButton(
-                        color: Color.fromARGB(221, 6, 2, 83),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(2.0),
-                        ),
-                        child: Text(
-                          'Insert Project',
-                          style: TextStyle(
-                            color: Colors.white,
+        body: Center(
+          child: ListView(
+            addAutomaticKeepAlives: false,
+            cacheExtent: 5.0,
+            children: <Widget>[
+              Form(
+                key: formKey,
+                child: Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                       Container(
+                      height: 50,
+                      width: 600,
+                      color: Colors.grey[100],
+                      child:TextField(
+                         decoration: InputDecoration(
+                            labelText: "project number:",
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(8))),
+                        controller: Num_Controller,
+                        enabled: false,
+                      )),
+                       SizedBox(
+                     height: 10),
+                      
+                       Container(
+                      height: 50,
+                      width: 600,
+                      color: Colors.grey[100],
+                      child:
+                      TextFormField(
+                        controller: ProjectName_Controller,
+                          decoration: InputDecoration(
+                            labelText: "Project name",
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(8))),
+                        keyboardType: TextInputType.text,
+                        validator: (val) =>
+                            val?.length == 0 ? 'Enter project Name' : null,
+                      )),
+                       SizedBox(
+                     height: 10),
+                      Container(
+                      height: 50,
+                      width: 600,
+                      color: Colors.grey[100],
+                      child: 
+                      TextFormField(
+                        controller: Administration_Controller,
+                        decoration: InputDecoration(
+                              labelText: "Administration",
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(8))),
+                        keyboardType: TextInputType.text,
+                        validator: (val) =>
+                            val?.length == 0 ? 'Enter Administration' : null,
+                      )),
+                       SizedBox(
+                     height: 10),
+                      Container(
+                      height: 50,
+                      width: 600,
+                      color: Colors.grey[100],
+                      child:
+                      TextFormField(
+                        controller: ProjectManager_Controller,
+                        decoration: InputDecoration(
+                              labelText: "Project Manager",
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(8))),
+                        keyboardType: TextInputType.text,
+                        validator: (val) =>
+                            val?.length == 0 ? 'Enter project Manager' : null,
+                      )),
+                       SizedBox(
+                     height: 10),
+                      Container(
+                      height: 50,
+                      width: 600,
+                      color: Colors.grey[100],
+                      child:
+                      TextFormField(
+                        controller: ProjectState_Controller,
+                        decoration: InputDecoration(
+                              labelText: "Project State",
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(8))),
+                        keyboardType: TextInputType.text,
+                        validator: (val) =>
+                            val?.length == 0 ? 'Enter project State' : null,
+                      )),
+                       SizedBox(
+                     height: 10),
+                     Container(
+                      height: 50,
+                      width: 600,
+                      color: Colors.grey[100],
+                      child:
+                      TextFormField(
+                        controller: LastUpdate_Controller,
+                         decoration: InputDecoration(
+                            labelText: "Last Update",
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(8))),
+                        keyboardType: TextInputType.text,
+                        validator: (val) =>
+                            val?.length == 0 ? 'Enter Last Update' : null,
+                      )),
+                       SizedBox(
+                     height: 10),
+                       Container(
+                      height: 100,
+                      width: 600,
+                      color: Colors.grey[100],
+                      child: 
+                      TextFormField(
+                        controller: TheCost_Controller,
+                        decoration: InputDecoration(
+                            labelText: "The cost",
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(8))),
+                        maxLength: 10,
+                        keyboardType: TextInputType.number,
+                        validator: (val) => NotIntCheck(val)
+                            ? 'Enter The cost ,Number Required'
+                            : null,
+                      )),
+                      SizedBox(
+                        width: 200,
+                        child: MaterialButton(
+                          color: Color.fromARGB(221, 6, 2, 83),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(2.0),
                           ),
+                          child: Text(
+                            'Insert Project',
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                          onPressed: validate,
                         ),
-                        onPressed: validate,
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
-            ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: DataTable(
-                columns: [
-                  DataColumn(
-                    label: Text("Num"),
-                  ),
-                  DataColumn(
-                    label: Text("Project name"),
-                  ),
-                  DataColumn(
-                    label: Text("Administration"),
-                  ),
-                  DataColumn(
-                    label: Text("Project Manager"),
-                  ),
-                  DataColumn(
-                    label: Text("Project State"),
-                  ),
-                  DataColumn(
-                    label: Text("Last Update"),
-                  ),
-                  DataColumn(
-                    label: Text("The Cost"),
-                  ),
-                ],
-                rows: PersonsLst.map(
-                  (p) => DataRow(cells: [
-                    DataCell(
-                      Text(p.Num.toString()),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child:
+                DataTable(
+                   headingRowColor: MaterialStateColor.resolveWith(
+                        (states) => Color.fromARGB(255, 220, 219, 219)),
+                  columns: [
+                    DataColumn(
+                      label: Text("Num"),
                     ),
-                    DataCell(
-                      Text(p.ProjectName),
+                    DataColumn(
+                      label: Text("Project name"),
                     ),
-                    DataCell(
-                      Text(p.Administration),
+                    DataColumn(
+                      label: Text("Administration"),
                     ),
-                    DataCell(
-                      Text(p.ProjectManager),
+                    DataColumn(
+                      label: Text("Project Manager"),
                     ),
-                    DataCell(
-                      Text(p.ProjectState),
+                    DataColumn(
+                      label: Text("Project State"),
                     ),
-                    DataCell(
-                      Text(p.LastUpdate),
+                    DataColumn(
+                      label: Text("Last Update"),
                     ),
-                    DataCell(
-                      Text(p.TheCost.toString()),
+                    DataColumn(
+                      label: Text("The Cost"),
                     ),
-                  ]),
-                ).toList(),
+                  ],
+                  rows: PersonsLst.map(
+                    (p) => DataRow(cells: [
+                      DataCell(
+                        Text(p.Num.toString()),
+                      ),
+                      DataCell(
+                        Text(p.ProjectName),
+                      ),
+                      DataCell(
+                        Text(p.Administration),
+                      ),
+                      DataCell(
+                        Text(p.ProjectManager),
+                      ),
+                      DataCell(
+                        Text(p.ProjectState),
+                      ),
+                      DataCell(
+                        Text(p.LastUpdate),
+                      ),
+                      DataCell(
+                        Text(p.TheCost.toString()),
+                      ),
+                    ]),
+                  ).toList(),
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

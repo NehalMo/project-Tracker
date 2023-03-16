@@ -59,8 +59,8 @@ class _MyDrawerState extends State<MyDrawer> {
                 backgroundImage: AssetImage("images/amn3.png"),
                 child: Text(""),
               ),
-              accountName: Text("Nehal"),
-              accountEmail: Text("aa@gmail.com"),
+              accountName: Text("Useer-Name"),
+              accountEmail: Text("...@gmail.com"),
               decoration: BoxDecoration(color: Color.fromARGB(221, 6, 2, 83)),
             ),
             ListTile(

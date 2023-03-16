@@ -82,14 +82,14 @@ class _MyprofileState extends State<Myprofile> {
                   height: 10,
                 ),
                 Text(
-                  "Nehal ALhablani",
+                  "User-Name",
                   style: TextStyle(fontSize: 18, color: Colors.white),
                 ),
                 SizedBox(
                   height: 5,
                 ),
                 Text(
-                  "Email: Nehal@gmail.com",
+                  "Email: ....@gmail.com",
                   style: TextStyle(fontSize: 16, color: Colors.white),
                 ),
               ],
